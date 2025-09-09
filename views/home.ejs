@@ -1,0 +1,36 @@
+<!-- Header -->
+<%- include("partials/header.ejs") %>
+
+<div class="post-form">
+    <h2>Create post</h2>
+
+    <form action="/post" method="POST">
+        <input type="text" name="title" placeholder="Title" id="title"> <br>
+        <input type="text" name="body" placeholder="Body text" id="body"> <br>
+        <input type="submit" value="Post" id="post">
+    </form>
+
+    <hr>
+</div>
+
+<div class="posts-list">
+    <h2>All posts</h2>
+
+    <ul>
+        <% if (posts.length > 0) { %>
+            <% posts.forEach((post) => { %>
+                <li><a href="post.ejs"><%= post.title %></a></li>
+            <% }) %>
+        <% } else { %>
+            <p>No posts yet.<p>
+        <% } %>
+    </ul>
+</div>
+
+
+<!-- Footer -->
+<%- include("partials/footer.ejs") %>
+
+
+
+
