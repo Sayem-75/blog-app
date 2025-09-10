@@ -44,6 +44,21 @@ app.post("/post/:index/delete", (req, res) => {
   res.redirect("/");
 });
 
+app.get("/post/:index/edit", (req, res) => {
+  const index = req.params.index;
+  const post = posts[index];
+  res.render("edit", { post: post, index: index });
+});
+
+app.post("/post/:index/edit", (req, res) => {
+  const index = req.params.index;
+
+  posts[index].title = req.body["title"];
+  posts[index].body = req.body["body"];
+
+  res.redirect("/post/" + index);
+});
+
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });

@@ -9,10 +9,10 @@
     <p><%= post.body %></p>
 
     <div class="action-btns">
-        <button class="edit-btn" href="/post/:index/edit" type="button" >Edit</button>
+        <a href="/post/<%= index %>/edit" class="edit-btn btn">Edit</a>
 
         <form action="/post/<%= index %>/delete" method="POST">
-            <button class="delete-btn" type="submit" >Delete</button>
+            <button class="delete-btn btn" type="submit" >Delete</button>
         </form>
     </div>
     

@@ -1,0 +1,15 @@
+<!-- Header -->
+<%- include("partials/header.ejs") %>
+
+<div class="post-form">
+    <h2>Edit post</h2>
+
+    <form action="/post/<%= index %>/edit" method="POST">
+        <input value="<%= post.title %>"  type="text" name="title" placeholder="Title" id="title" required> <br>
+        <textarea name="body" placeholder="Body text" id="body" required><%= post.body %></textarea> <br>
+        <input type="submit" value="Post" id="post">
+    </form>
+</div>
+
+<!-- Footer -->
+<%- include("partials/footer.ejs") %>

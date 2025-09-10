@@ -1,4 +1,4 @@
-body {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -20,12 +20,19 @@ h2 {
     font-style: normal;
 }
 
-input::placeholder {
+::placeholder {
   color: black;
   font-size: 16px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
-input {
+textarea::placeholder {
+  padding-top: 60px;
+}
+
+input, textarea {
   border-radius: 20px;
   background-color: lightgrey;
   margin-bottom: 7px;
@@ -76,7 +83,7 @@ a {
 }
 
 footer {
-  position: absolute;
+  position: relative;
   bottom: 0;
   width: 100%;
   text-align: center;
@@ -85,10 +92,6 @@ footer {
   font-style: normal;
 }
 
-/* .post-page > h2 {
-  margin-bottom: -7px;
-} */
-
 .action-btns {
   display: flex;
   justify-content: flex-end;
@@ -96,7 +99,7 @@ footer {
   margin-top: 100px;
 }
 
-button {
+.btn {
   width: 104px;
   height: 40px;
   border-radius: 20px;
@@ -104,16 +107,18 @@ button {
   cursor: pointer;
   border: 0;
   transition: background-color 0.3s ease;
+  font-size: 15px;
 }
 
 .edit-btn {
   background-color: #1800ad;
   margin-right: 5px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .delete-btn {
   background-color: #ff3131;
 }
-
-
-
