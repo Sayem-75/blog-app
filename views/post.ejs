@@ -7,8 +7,18 @@
     <p><%= post.date.toLocaleString('default', { month: 'long'}) + " " + post.date.getFullYear() %></p>
 
     <p><%= post.body %></p>
+
+    <div class="action-btns">
+        <button class="edit-btn" href="/post/:index/edit" type="button" >Edit</button>
+
+        <form action="/post/<%= index %>/delete" method="POST">
+            <button class="delete-btn" type="submit" >Delete</button>
+        </form>
+    </div>
+    
 </div>
 
 <!-- Footer -->
 <%- include("partials/footer.ejs") %>
+
 

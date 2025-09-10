@@ -14,12 +14,12 @@ app.get("/", (req, res) => {
     res.render("home", { posts: posts });
 });
 
-app.get('/post/:index', (req, res) => {
+app.get("/post/:index", (req, res) => {
   const index = req.params.index;
   const post = posts[index];
 
   if (post) {
-    res.render("post", { post: post });
+    res.render("post", { post: post, index: index });
   } else {
     res.send("Post not found.");
   }
@@ -37,7 +37,13 @@ app.post("/post", (req, res) => {
   res.redirect("/");
 });
 
+app.post("/post/:index/delete", (req, res) => {
+  const index = req.params.index;
+  posts.splice(index, 1);
+
+  res.redirect("/");
+});
+
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
-

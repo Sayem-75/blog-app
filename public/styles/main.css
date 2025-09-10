@@ -89,3 +89,31 @@ footer {
   margin-bottom: -7px;
 } */
 
+.action-btns {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 5px;
+  margin-top: 100px;
+}
+
+button {
+  width: 104px;
+  height: 40px;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+  border: 0;
+  transition: background-color 0.3s ease;
+}
+
+.edit-btn {
+  background-color: #1800ad;
+  margin-right: 5px;
+}
+
+.delete-btn {
+  background-color: #ff3131;
+}
+
+
+
