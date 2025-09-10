@@ -18,8 +18,10 @@
 
     <ul>
         <% if (posts.length > 0) { %>
-            <% posts.forEach((post) => { %>
-                <li><a href="post.ejs"><%= post.title %></a></li>
+            <% posts.forEach((post, index) => { %>
+                <li>
+                    <a href="/post/<%= index %>"><%= post.title %></a>
+                </li>
             <% }) %>
         <% } else { %>
             <p>No posts yet.<p>
@@ -30,7 +32,3 @@
 
 <!-- Footer -->
 <%- include("partials/footer.ejs") %>
-
-
-
-

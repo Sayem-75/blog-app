@@ -1,0 +1,14 @@
+<!-- Header -->
+<%- include("partials/header.ejs") %>
+
+<div class="post-page">
+    <h2><%= post.title %></h2>
+
+    <p><%= post.date.toLocaleString('default', { month: 'long'}) + " " + post.date.getFullYear() %></p>
+
+    <p><%= post.body %></p>
+</div>
+
+<!-- Footer -->
+<%- include("partials/footer.ejs") %>
+
