@@ -1,7 +1,10 @@
 * {
+  box-sizing: border-box;
+}
+
+body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     background-color: #edffcc;
 }
 
@@ -28,9 +31,9 @@ h2 {
   font-style: normal;
 }
 
-textarea::placeholder {
-  padding-top: 60px;
-}
+/* textarea::placeholder {
+  padding-top: 5px;
+} */
 
 input, textarea {
   border-radius: 20px;
@@ -49,6 +52,7 @@ input, textarea {
 #body {
   width: 450px;
   height: 145px;
+  resize: none;
 }
 
 #post {
@@ -83,13 +87,14 @@ a {
 }
 
 footer {
-  position: relative;
-  bottom: 0;
+  /* position: absolute;
+  bottom: 0; */
   width: 100%;
   text-align: center;
   font-family: "Inter", sans-serif;
   font-weight: 400;
   font-style: normal;
+  margin-top: 50px;
 }
 
 .action-btns {
