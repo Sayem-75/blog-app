@@ -59,6 +59,6 @@ app.post("/post/:index/edit", (req, res) => {
   res.redirect("/post/" + index);
 });
 
-app.listen(port, () => {
-  console.log(`Listening on port ${port}`);
+app.listen(process.env.PORT || port, () => {
+  console.log(`Listening on port ${process.env.PORT || port}`);
 });
